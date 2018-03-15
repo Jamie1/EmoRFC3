@@ -41,12 +41,12 @@ public class tableControllerPlayer extends DatabaseHandler {
         if (cursor.moveToFirst()) {
             do {
 
-                //int id = Integer.parseInt(cursor.getString(cursor.getColumnIndex("id")));
+                int id = Integer.parseInt(cursor.getString(cursor.getColumnIndex("id")));
                 String studentFirstname = cursor.getString(cursor.getColumnIndex("firstname"));
                 String studentEmail = cursor.getString(cursor.getColumnIndex("email"));
 
                 objectPlayer objectStudent = new objectPlayer();
-                //objectStudent.id = id;
+                objectStudent.id = id;
                 objectStudent.firstname = studentFirstname;
                 objectStudent.email = studentEmail;
 

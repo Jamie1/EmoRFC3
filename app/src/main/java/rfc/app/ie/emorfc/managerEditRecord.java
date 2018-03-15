@@ -1,7 +1,13 @@
 package rfc.app.ie.emorfc;
 
+
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,24 +28,27 @@ public class managerEditRecord extends AppCompatActivity {
         LinearLayout linearLayoutRecords = (LinearLayout) findViewById(R.id.linearLayoutRecords);
         linearLayoutRecords.removeAllViews();
 
-        List<objectPlayer> students = new tableControllerPlayer(this).read();
+        List<objectPlayer> players = new tableControllerPlayer(this).read();
 
-        if (students.size() > 0) {
+        if (players.size() > 0) {
 
-            for (objectPlayer obj : students) {
+            for (objectPlayer obj : players) {
 
                 int id = obj.id;
-                String studentFirstname = obj.firstname;
-                String studentEmail = obj.email;
+                String playerFirstname = obj.firstname;
+                String playerEmail = obj.email;
 
-                String textViewContents = studentFirstname + " - " + studentEmail;
+                String textViewContents = playerFirstname + " - " + playerEmail;
 
-                TextView textViewStudentItem= new TextView(this);
-                textViewStudentItem.setPadding(0, 10, 0, 10);
-                textViewStudentItem.setText(textViewContents);
-                textViewStudentItem.setTag(Integer.toString(id));
+                TextView textViewPlayerItem= new TextView(this);
+                textViewPlayerItem.setPadding(0, 10, 0, 10);
+                textViewPlayerItem.setText(textViewContents);
+                textViewPlayerItem.setTag(Integer.toString(id));
 
-                linearLayoutRecords.addView(textViewStudentItem);
+                textViewPlayerItem.setOnLongClickListener(new OnLongClickListenerPlayerRecord());
+
+
+                linearLayoutRecords.addView(textViewPlayerItem);
             }
 
         }
@@ -51,6 +60,34 @@ public class managerEditRecord extends AppCompatActivity {
             locationItem.setText("No records yet.");
 
             linearLayoutRecords.addView(locationItem);
+        }
+
+    }
+
+    public class OnLongClickListenerPlayerRecord implements View.OnLongClickListener {
+
+
+        Context context;
+        String id;
+
+        @Override
+        public boolean onLongClick(View view) {
+
+            context = view.getContext();
+            id = view.getTag().toString();
+
+            final CharSequence[] items = { "Edit", "Delete" };
+
+            new AlertDialog.Builder(context).setTitle("Student Record")
+                    .setItems(items, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int item) {
+
+                            dialog.dismiss();
+
+                        }
+                    }).show();
+
+            return false;
         }
 
     }
