@@ -79,13 +79,13 @@ public class managerEditRecord extends AppCompatActivity {
             context = view.getContext();
             id = view.getTag().toString();
 
-            final CharSequence[] items = { "Edit", "Delete" };
+            final CharSequence[] items = {  "Delete" };
 
             new AlertDialog.Builder(context).setTitle("Player Record")
                     .setItems(items, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int item) {
 
-                                if (item == 1) {
+                                if (item == 0) {
 
                                 boolean deleteSuccessful = new tableControllerPlayer(context).delete(Integer.parseInt(id));
 
@@ -96,7 +96,7 @@ public class managerEditRecord extends AppCompatActivity {
                                 }
 
 
-                                //((MainActivity) context).readRecords();
+
 
                             }
 

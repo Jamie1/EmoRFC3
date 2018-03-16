@@ -55,7 +55,7 @@ public class managerMain extends AppCompatActivity {
         @Override
         public void onClick(View view) {
 
-            //((MainActivity) context).readRecords();
+
             final Context context;
             context = view.getRootView().getContext();
 

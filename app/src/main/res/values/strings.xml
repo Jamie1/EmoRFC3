@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Emo RFC</string>
-    <string name="playerBtn">Player</string>
+    <string name="playerBtn">View Players</string>
     <string name="managerBtn">Manager</string>
     <string name="mainSubTitle">Please select weather you are a manager or a player</string>
     <string name="mainTitle">Welcome to Emo RFC App</string>

@@ -28,16 +28,7 @@ public class playerLogin extends AppCompatActivity {
 
             managerNameTxtBox = findViewById(R.id.playerNameTxt);
             passwordTxtBox = findViewById(R.id.playerPasswordTxt);
-           // loginBtn = findViewById(R.id.playerLogiBtn);
 
-           // loginBtn.setOnClickListener(new View.OnClickListener() {
-              //  @Override
-               // public void onClick(View view) {
-
-                 //   onClickLoginBtn();
-
-              //  }
-            //});
 
 
         }
@@ -62,8 +53,6 @@ public class playerLogin extends AppCompatActivity {
                 textViewPlayerItem.setPadding(0, 10, 0, 10);
                 textViewPlayerItem.setText(textViewContents);
                 textViewPlayerItem.setTag(Integer.toString(id));
-
-               // textViewPlayerItem.setOnLongClickListener(new managerEditRecord.OnLongClickListenerPlayerRecord());
 
                 linearLayoutRecords.addView(textViewPlayerItem);
             }

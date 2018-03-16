@@ -34,8 +34,7 @@ public class managerLogin extends AppCompatActivity {
                 if(userName.equals("Admin") && (pass.equals("1234")) ){
                     Toast.makeText(managerLogin.this, "Login Successful", Toast.LENGTH_LONG).show();
 
-                    //Intent logged = new Intent(this, managerMain.class);
-                    //startActivity(logged);
+
 
                     Intent managerMain = new Intent(managerLogin.this, managerMain.class);
                     startActivity(managerMain);
@@ -51,29 +50,7 @@ public class managerLogin extends AppCompatActivity {
 
 
     }
-    //public void onClickLoginBtn(View view) {
 
-        //String userName = managerNameTxtBox.getText().toString();
-       // String pass = passwordTxtBox.getText().toString();
-       // if(userName.equals("Admin") && (pass.equals("1234")) ){
-           // Toast.makeText(managerLogin.this, "Login Successful", Toast.LENGTH_LONG).show();
-
-            //Intent logged = new Intent(this, managerMain.class);
-            //startActivity(logged);
-
-            //Intent managerMain = new Intent(managerLogin.this, managerMain.class);
-           // startActivity(managerMain);
-
-        //}
-       // else {
-
-        //    Toast.makeText(managerLogin.this, "Incorrect Login Details Try again", Toast.LENGTH_LONG).show();
-        //}
-
-
-
-        //Intent managerMain = new Intent(managerLogin.this, managerLogin.class);
-        //startActivity(managerMain);
 
     }
 
