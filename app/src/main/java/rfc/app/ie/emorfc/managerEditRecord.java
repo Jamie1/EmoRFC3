@@ -23,6 +23,7 @@ public class managerEditRecord extends AppCompatActivity {
 
         readRecords();
 
+
     }
 
     public void readRecords() {
@@ -94,7 +95,7 @@ public class managerEditRecord extends AppCompatActivity {
                                     Toast.makeText(context, "Unable to delete student record.", Toast.LENGTH_SHORT).show();
                                 }
 
-                                    
+
                                 //((MainActivity) context).readRecords();
 
                             }
@@ -107,6 +108,8 @@ public class managerEditRecord extends AppCompatActivity {
         }
 
     }
+
+
 
 
 

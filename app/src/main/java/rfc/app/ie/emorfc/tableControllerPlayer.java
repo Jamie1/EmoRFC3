@@ -65,4 +65,18 @@ public class tableControllerPlayer extends DatabaseHandler {
         super(context);
     }
 
+
+    public boolean delete(int id) {
+        boolean deleteSuccessful = false;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        deleteSuccessful = db.delete("players", "id ='" + id + "'", null) > 0;
+        db.close();
+
+        return deleteSuccessful;
+
+    }
+
+
+
 }

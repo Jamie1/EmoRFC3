@@ -3,6 +3,9 @@ package rfc.app.ie.emorfc;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by jim on 14/03/2018.
@@ -25,7 +28,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "firstname TEXT, " +
                 "email TEXT ) ";
 
+
         db.execSQL(sql);
+
 
     }
 
@@ -35,7 +40,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String sql = "DROP TABLE IF EXISTS players";
         db.execSQL(sql);
 
+
+
         onCreate(db);
     }
+
+
+
+
 
 }

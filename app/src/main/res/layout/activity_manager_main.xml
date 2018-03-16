@@ -7,7 +7,6 @@
     tools:context="rfc.app.ie.emorfc.managerMain">
 
 
-
     <Button
         android:id="@+id/createPlayerBtn"
         android:layout_width="wrap_content"
@@ -22,7 +21,7 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintVertical_bias="0.152" />
 
     <Button
         android:id="@+id/editPlayerBtn"
@@ -31,7 +30,9 @@
         android:text="@string/editPlayerBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369" />
 
 </android.support.constraint.ConstraintLayout>

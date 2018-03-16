@@ -20,7 +20,7 @@
         <activity android:name=".playerLogin" />
         <activity android:name=".managerMain" />
         <activity android:name=".playerMain" />
-        <activity android:name=".managerEditRecord"></activity>
+        <activity android:name=".managerEditRecord" />
     </application>
 
 </manifest>

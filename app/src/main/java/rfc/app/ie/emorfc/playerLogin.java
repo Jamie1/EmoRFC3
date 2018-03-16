@@ -6,7 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.List;
 
 public class playerLogin extends AppCompatActivity {
 
@@ -18,9 +22,9 @@ public class playerLogin extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_player_login);
+            setContentView(R.layout.activity_manager_edit_record);
 
-
+            readRecords();
 
             managerNameTxtBox = findViewById(R.id.playerNameTxt);
             passwordTxtBox = findViewById(R.id.playerPasswordTxt);
@@ -37,29 +41,43 @@ public class playerLogin extends AppCompatActivity {
 
 
         }
-        public void onClickLoginBtn() {
+    public void readRecords() {
 
-            String userName = managerNameTxtBox.getText().toString();
-            String pass = passwordTxtBox.getText().toString();
-            if(userName.equals("Jim") && (pass.equals("1234")) ){
-                Toast.makeText(playerLogin.this, "Login Successful", Toast.LENGTH_LONG).show();
+        LinearLayout linearLayoutRecords = (LinearLayout) findViewById(R.id.linearLayoutRecords);
+        linearLayoutRecords.removeAllViews();
 
-                //Intent logged = new Intent(this, managerMain.class);
-                //startActivity(logged);
+        List<objectPlayer> players = new tableControllerPlayer(this).read();
 
-                Intent managerMain = new Intent(playerLogin.this, managerMain.class);
-                startActivity(managerMain);
+        if (players.size() > 0) {
 
+            for (objectPlayer obj : players) {
+
+                int id = obj.id;
+                String playerFirstname = obj.firstname;
+                String playerEmail = obj.email;
+
+                String textViewContents = playerFirstname + " - " + playerEmail;
+
+                TextView textViewPlayerItem= new TextView(this);
+                textViewPlayerItem.setPadding(0, 10, 0, 10);
+                textViewPlayerItem.setText(textViewContents);
+                textViewPlayerItem.setTag(Integer.toString(id));
+
+               // textViewPlayerItem.setOnLongClickListener(new managerEditRecord.OnLongClickListenerPlayerRecord());
+
+                linearLayoutRecords.addView(textViewPlayerItem);
             }
-            else {
-
-                Toast.makeText(playerLogin.this, "Incorrect Login Details Try again", Toast.LENGTH_LONG).show();
-            }
-
-
-
-            //Intent managerMain = new Intent(managerLogin.this, managerLogin.class);
-            //startActivity(managerMain);
 
         }
+
+        else {
+
+            TextView locationItem = new TextView(this);
+            locationItem.setPadding(8, 8, 8, 8);
+            locationItem.setText("No records yet.");
+
+            linearLayoutRecords.addView(locationItem);
+        }
+
+    }
 }

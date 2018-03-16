@@ -13,7 +13,9 @@
     <string name="playerLoginButton">Login</string>
     <string name="createPlayerBtn">Create Player</string>
     <string name="playerMainBtn">Player</string>
-    <string name="editPlayerBtn">Edit Player</string>]
+    <string name="editPlayerBtn">Delete Player</string>
+    <string name="createMatchBtn">Create Match</string>
+    <string name="deleteMatchBtn">Delete Match</string>
 
 
 </resources>

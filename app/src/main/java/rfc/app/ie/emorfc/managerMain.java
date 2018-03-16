@@ -25,13 +25,10 @@ public class managerMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager_main);
 
-        //readRecords();
-
-        Button createPlayerButton =  findViewById(R.id.createPlayerBtn);
+        Button createPlayerButton = findViewById(R.id.createPlayerBtn);
         createPlayerButton.setOnClickListener(new OnClickListenerCreatePlayer());
 
         Button editPlayerBtn = findViewById(R.id.editPlayerBtn);
-
         editPlayerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,13 +38,18 @@ public class managerMain extends AppCompatActivity {
             }
         });
 
+
     }
+
+
 
     public void onClickEditPlayerBtn(){
 
         Intent managerEditRecord = new Intent(managerMain.this, managerEditRecord.class);
         startActivity(managerEditRecord);
     }
+
+
 
     public class OnClickListenerCreatePlayer implements View.OnClickListener {
         @Override
@@ -67,7 +69,7 @@ public class managerMain extends AppCompatActivity {
                     .setView(formElementsView)
                     .setTitle("Create Player")
                     .setPositiveButton("Add",
-                             new DialogInterface.OnClickListener() {
+                            new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
 
                                     String playerFirstname = editTextPlayerName.getText().toString();
@@ -81,7 +83,9 @@ public class managerMain extends AppCompatActivity {
 
                                     if(createSuccessful){
                                         Toast.makeText(context, "Player information was saved.", Toast.LENGTH_SHORT).show();
-                                    }else{
+                                    }
+                                    else
+                                    {
                                         Toast.makeText(context, "Unable to save player information.", Toast.LENGTH_SHORT).show();
                                     }
 
@@ -95,45 +99,15 @@ public class managerMain extends AppCompatActivity {
 
 
         }
+
+
     }
 
 
-    /*public void readRecords() {
 
-        LinearLayout linearLayoutRecords = (LinearLayout) findViewById(R.id.linearLayoutRecords);
-        linearLayoutRecords.removeAllViews();
 
-        List<objectPlayer> students = new tableControllerPlayer(this).read();
 
-        if (students.size() > 0) {
 
-            for (objectPlayer obj : students) {
 
-                int id = obj.id;
-                String studentFirstname = obj.firstname;
-                String studentEmail = obj.email;
-
-                String textViewContents = studentFirstname + " - " + studentEmail;
-
-                TextView textViewStudentItem= new TextView(this);
-                textViewStudentItem.setPadding(0, 10, 0, 10);
-                textViewStudentItem.setText(textViewContents);
-                textViewStudentItem.setTag(Integer.toString(id));
-
-                linearLayoutRecords.addView(textViewStudentItem);
-            }
-
-        }
-
-        else {
-
-            TextView locationItem = new TextView(this);
-            locationItem.setPadding(8, 8, 8, 8);
-            locationItem.setText("No records yet.");
-
-            linearLayoutRecords.addView(locationItem);
-        }
-
-    } ***/
 
 }
