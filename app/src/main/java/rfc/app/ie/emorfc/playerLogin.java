@@ -17,7 +17,7 @@ public class playerLogin extends AppCompatActivity {
 
         EditText passwordTxtBox;
         EditText managerNameTxtBox;
-        Button loginBtn;
+       // Button loginBtn;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {

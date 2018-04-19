@@ -73,11 +73,11 @@ public class managerMain extends AppCompatActivity {
                                 public void onClick(DialogInterface dialog, int id) {
 
                                     String playerFirstname = editTextPlayerName.getText().toString();
-                                    String studentEmail = editTextPlayerEmail.getText().toString();
+                                    String playerEmail = editTextPlayerEmail.getText().toString();
 
                                     objectPlayer objectPlayer = new objectPlayer();
                                     objectPlayer.firstname= playerFirstname;
-                                    objectPlayer.email= studentEmail;
+                                    objectPlayer.email= playerEmail;
 
                                     boolean createSuccessful = new tableControllerPlayer(context).create(objectPlayer);
 

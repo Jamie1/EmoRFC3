@@ -14,7 +14,7 @@ import static android.content.ContentValues.TAG;
 public class DatabaseHandler extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
-    protected static final String DATABASE_NAME = "PlayerDatabase";
+    private static final String DATABASE_NAME = "PlayerDatabase";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

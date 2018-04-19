@@ -90,7 +90,7 @@ public class managerEditRecord extends AppCompatActivity {
                                 boolean deleteSuccessful = new tableControllerPlayer(context).delete(Integer.parseInt(id));
 
                                 if (deleteSuccessful){
-                                    Toast.makeText(context, "Student record was deleted.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(context, "Player record was deleted.", Toast.LENGTH_SHORT).show();
                                 }else{
                                     Toast.makeText(context, "Unable to delete student record.", Toast.LENGTH_SHORT).show();
                                 }
