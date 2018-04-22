@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
+
     }
     public void onClickPlayerbtn(View view) {
 
@@ -34,4 +36,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(managerScreen);
 
     }
+
+    public void onClickSearchBtn(View view){
+
+        Intent searchScreen;
+        searchScreen = new Intent(this, searchActivity.class);
+        startActivity(searchScreen);
+    }
+
+
+
 }

@@ -1,6 +1,8 @@
 package rfc.app.ie.emorfc;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -23,7 +25,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String sql = "CREATE TABLE players " +
+        String sql = "CREATE TABLE players" +
                 "( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "firstname TEXT, " +
                 "email TEXT ) ";
@@ -44,6 +46,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         onCreate(db);
     }
+
+
+
+
 
 
 
