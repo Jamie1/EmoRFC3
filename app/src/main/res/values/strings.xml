@@ -2,7 +2,7 @@
     <string name="app_name">Emo RFC</string>
     <string name="playerBtn">View Players</string>
     <string name="managerBtn">Manager</string>
-    <string name="mainSubTitle">Please select weather you are a manager or a player</string>
+    <string name="mainSubTitle">Please select weather you are a manager, player or search</string>
     <string name="mainTitle">Welcome to Emo RFC App</string>
     <string name="managerLoginBtn">Login</string>
     <string name="managerPasswordTxt">Password</string>
@@ -16,6 +16,9 @@
     <string name="editPlayerBtn">Delete Player</string>
     <string name="createMatchBtn">Create Match</string>
     <string name="deleteMatchBtn">Delete Match</string>
+    <string name="searchEditText">Search</string>
+    <string name="searchList"></string>
+    <string name="searchBtn">Search Matches</string>
 
 
 </resources>

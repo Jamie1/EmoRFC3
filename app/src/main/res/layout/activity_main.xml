@@ -5,29 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="rfc.app.ie.emorfc.MainActivity"
-    
+
     >
 
 
     <Button
         android:id="@+id/playerBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
+        android:background="@color/buttoncolor"
         android:onClick="onClickPlayerbtn"
         android:text="@string/playerBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainSubTitle" />
 
+
     <Button
         android:id="@+id/managerBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="196dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/buttoncolor"
         android:onClick="onClickManagerbtn"
         android:text="@string/managerBtn"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerBtn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/mainSubTitle"
@@ -64,5 +67,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/buttoncolor"
+        android:onClick="onClickSearchBtn"
+        android:text="@string/searchBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/managerBtn"
+        app:layout_constraintVertical_bias="0.348" />
 
 </android.support.constraint.ConstraintLayout>

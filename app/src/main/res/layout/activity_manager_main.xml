@@ -21,7 +21,8 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintVertical_bias="0.152"
+    android:background="@color/buttoncolor"/>
 
     <Button
         android:id="@+id/editPlayerBtn"
@@ -33,6 +34,7 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.369" />
+        app:layout_constraintVertical_bias="0.369"
+        android:background="@color/buttoncolor"/>
 
 </android.support.constraint.ConstraintLayout>
