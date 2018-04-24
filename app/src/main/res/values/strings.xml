@@ -19,6 +19,8 @@
     <string name="searchEditText">Search</string>
     <string name="searchList"></string>
     <string name="searchBtn">Search Matches</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="mapBtn">View Map</string>
 
 
 </resources>

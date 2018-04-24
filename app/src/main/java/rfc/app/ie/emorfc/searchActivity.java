@@ -1,10 +1,12 @@
 package rfc.app.ie.emorfc;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -48,5 +50,12 @@ public class searchActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void onClickMapBtn(View view){
+
+        Intent mapScreen;
+        mapScreen = new Intent(this, mapsActivity.class);
+        startActivity(mapScreen);
     }
 }
