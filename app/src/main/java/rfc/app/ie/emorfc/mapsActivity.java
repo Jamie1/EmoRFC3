@@ -22,7 +22,7 @@ public class mapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        setUpMap();
+        //setUpMap();
     }
 
 
@@ -40,12 +40,16 @@ public class mapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng portarlington = new LatLng(53.160085, -7.190361);
+        mMap.addMarker(new MarkerOptions().position(portarlington).title("Portarlington"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(portarlington));
+
+        LatLng arles = new LatLng(52.892835, -7.021178);
+        mMap.addMarker(new MarkerOptions().position(arles).title("Arles"));
+
+        LatLng portlaoise = new LatLng(53.035352, -7.293922);
+        mMap.addMarker(new MarkerOptions().position(portlaoise).title("Portlaoise"));
     }
 
-    private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(53.161114,-7.190361)).title("This is my first marker"));
-    }
+
 }
