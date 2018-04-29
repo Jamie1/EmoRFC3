@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".managerLogin" />
         <activity android:name=".playerLogin" />
         <activity android:name=".managerMain" />
@@ -44,7 +44,8 @@
 
         <activity
             android:name=".mapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".regManager"></activity>
     </application>
 
 </manifest>

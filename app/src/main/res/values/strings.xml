@@ -21,6 +21,10 @@
     <string name="searchBtn">Search Matches</string>
     <string name="title_activity_maps">Map</string>
     <string name="mapBtn">View Match Locations</string>
+    <string name="registerBtn">Register</string>
+    <string name="submitBtn">Submit</string>
+    <string name="createMngrNameTxt" />
+    <string name="createMngrPasswordTxt" />
 
 
 </resources>

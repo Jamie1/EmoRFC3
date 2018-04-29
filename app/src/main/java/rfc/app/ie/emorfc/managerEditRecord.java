@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -79,7 +80,7 @@ public class managerEditRecord extends AppCompatActivity {
             context = view.getContext();
             id = view.getTag().toString();
 
-            final CharSequence[] items = {  "Delete" };
+            final CharSequence[] items = {  "Delete", "Edit" };
 
             new AlertDialog.Builder(context).setTitle("Player Record")
                     .setItems(items, new DialogInterface.OnClickListener() {
@@ -97,8 +98,8 @@ public class managerEditRecord extends AppCompatActivity {
 
 
 
-
                             }
+
 
                             dialog.dismiss();
 

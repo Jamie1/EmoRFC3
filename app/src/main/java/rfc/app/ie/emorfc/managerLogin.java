@@ -1,6 +1,7 @@
 package rfc.app.ie.emorfc;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,30 +26,39 @@ public class managerLogin extends AppCompatActivity {
         passwordTxtBox = findViewById(R.id.managerPasswordTxt);
         loginBtn = findViewById(R.id.managerLogBtn);
 
+
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 String userName = managerNameTxtBox.getText().toString();
                 String pass = passwordTxtBox.getText().toString();
-                if(userName.equals("Admin") && (pass.equals("1234")) ){
-                    Toast.makeText(managerLogin.this, "Login Successful", Toast.LENGTH_LONG).show();
 
+                SharedPreferences preferances = getSharedPreferences("MYPREFS", MODE_PRIVATE);
 
+                String userDetails = preferances.getString(userName + pass +"data", "Incorrect Details.");
+                SharedPreferences.Editor editor = preferances.edit();
+                editor.putString("display",userDetails);
+                editor.commit();
 
-                    Intent managerMain = new Intent(managerLogin.this, managerMain.class);
-                    startActivity(managerMain);
-
-                }
-                else {
-
-                    Toast.makeText(managerLogin.this, "Incorrect Login Details Try again", Toast.LENGTH_LONG).show();
-                }
-
+                Intent editScreen = new Intent(managerLogin.this, managerMain.class);
+                startActivity(editScreen);
             }
         });
 
 
+
+
+
+
+    }
+
+    public void onClickRegisterBtn(View view){
+
+        Intent registerScreen;
+        registerScreen = new Intent(this, regManager.class);
+        startActivity(registerScreen);
     }
 
 
